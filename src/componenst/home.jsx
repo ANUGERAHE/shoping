@@ -60,12 +60,12 @@ export default function Home({logout}){
                 <button className="bg-sky-400  font-semibold w-20 rounded-3xl p-2 max-sm:w-1/4 max-sm:p-1 max-sm:text-sm" onClick={logout}>Log out</button>
                 
             </div>
-                {mencari == false && <div className='grid grid-flow-col w-full justify-center gap-4 max-sm:grid-flow-row '>
+                {mencari == false && <div className='grid grid-flow-col w-full gap-4 max-sm:flex max-sm:flex-col max-sm:items-center'>
                     {Baju.map((baju,index) => (
-                    <div key={index} className= 'flex flex-col items-center border-solid border-black border-2 p-4 mt-8 h-96 justify-between w-60  max-sm:h-64'>
+                    <div key={index} className= 'flex flex-col items-center border-solid border-black border-2 p-4 mt-8 h-96 justify-between w-60  max-sm:h-64 max-sm:w-2/4'>
                         <img src={baju.image} alt={baju.alt} className='w-30 h-40 max-sm:h-20'/>
-                        <h4 className='font-bold max-sm:text-sm'>{baju.title}</h4>
-                        <p className='max-sm:text-sm max-sm:text-center'>{baju.deskripsi}</p>
+                        <h4 className='font-bold max-sm:text-xs text-center'>{baju.title}</h4>
+                        <p className='max-sm:text-xs max-sm:text-center'>{baju.deskripsi}</p>
                         <button className="bg-sky-400  font-semibold w-40 rounded-3xl p-2 max-sm:w-2/3 max-sm:p-1 max-sm:text-sm" onClick={() => handletambahpesan(baju.title)}>Tambah</button>
                     </div>
                 ))}
