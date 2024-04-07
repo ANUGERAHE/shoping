@@ -3,6 +3,7 @@ import Button from './button.jsx'
 import Troli from './keranjang.jsx'
 import { useRef,useState } from 'react'
 import  Keranjang from '../assets/keranjang.png'
+import Exit from '../assets/exit.png'
 
 export default function Home({logout}){
     const pesan = useRef()
@@ -57,7 +58,7 @@ export default function Home({logout}){
                 <h1 className='font-bold text-3xl max-sm:text-lg max-sm:hidden'>Shopping</h1>
                 <input type="text" placeholder='Search any t-shirt' className='p-2 w-1/2 border-solid border-2 rounded-3xl max-sm:w-2/3 max-sm:p-1 max-sm:text-sm md:p-1' ref={cari} onKeyDown={handlecari}/>
                 <button className="bg-sky-400  font-semibold w-20 rounded-3xl p-1 flex justify-center items-center max-sm:p-1 max-sm:h-8" onClick={handlekeranjang}><img src={Keranjang} alt="keranjang" className='bold w-4/12 max-sm:w-2/5' /></button>
-                <button className="bg-sky-400  font-semibold w-20 rounded-3xl p-2 max-sm:w-1/4 max-sm:p-1 max-sm:text-sm" onClick={logout}>Log out</button>
+                <button className="bg-sky-400  font-semibold w-20 rounded-3xl p-2 max-sm:p-2 max-sm:text-sm flex justify-center" onClick={logout}><img src={Exit} alt="exit" className='bold w-3/12 max-sm:w-1/3' /></button>
                 
             </div>
                 {mencari == false && <div className='grid grid-flow-col w-full gap-4 max-sm:flex max-sm:flex-col max-sm:items-center md:grid-rows-2 md:ml-1 md:gap-2 lg:ml-6 xl:gap-1 xl:grid-rows-1 xl:ml-1 2xl:gap-1'>
