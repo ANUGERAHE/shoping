@@ -23,7 +23,7 @@ const Login = forwardRef(function Login({welcome,jadi,Buat},ref){
         setdaftar((nilai) => !nilai)
     }
 
-    let border = "border-black border-solid border-2 p-2 w-80"
+    let border = "border-black border-solid border-2 p-2 w-80 max-sm:3/4 2xl:w-3/5 sm:3/4"
     // let border_pass = "border-black border-solid border-2 p-2 w-80"
 
     // if(finish === '' || password === ''){
@@ -33,11 +33,11 @@ const Login = forwardRef(function Login({welcome,jadi,Buat},ref){
     
 
     return (
-        <div className="flex flex-row justify-evenly items-center w-screen h-screen">
-            <img src={Gambar.imgate} alt="gambar animasi" className="h-80 w-80"/>
-            <div className="flex flex-col gap-y-2 items-center">
-                <h1 className="gap-y-6 text-3xl">{daftar == false ? 'LOGIN' : 'REGISTER'}</h1>
-                <input type="text"  required placeholder="USERNAME" className={border}/>
+        <div className="flex flex-row justify-evenly items-center w-screen h-screen max-sm:w-screen max-sm:h-screen">
+            <img src={Gambar.imgate} alt="gambar animasi" className="h-80 w-80 max-sm:hidden sm:hidden lg:inline md:inline 2xl:w-6/12 2xl:h-2/5"/>
+            <div className="flex flex-col gap-y-2 items-center 2xl:w-2/4 border-2 max-sm:w-screen">
+                <h1 className="gap-y-6 text-3xl max-sm:text-5xl w-">{daftar == false ? 'LOGIN' : 'REGISTER'}</h1>
+                <input type="text"  required placeholder="USERNAME" className="border-black border-solid border-2 p-2 w-80 max-sm:w-74 2xl:w-3/5"/>
                 <input type="password" ref={ref} required placeholder="PASSWORD"className={border}/>
                 {daftar && <input type="text" placeholder="FULL NAME" className={border}/>}
                 {daftar && <input type="email"placeholder="EMAIL" className={border}/>}

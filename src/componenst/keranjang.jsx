@@ -9,11 +9,11 @@ const Troli = forwardRef(function Troli({pesan,click},ref){
             {pesan.map((nilai,index) => (
                 <div key={index} className="border-solid rounded-sm border-black border-2 p-2 flex flex-row justify-between mt-4 items-center max-sm:justify-between">
                     <p className="max-sm:text-base">{nilai}</p>
-                    <button className="border-2 border-solid rounded-lg w-1/12 bg-sky-400 p-1 max-sm:text-sm max-sm:w-1/4" onClick={() => click(nilai)}>Hapus</button>
+                    <button className="border-2 border-solid rounded-lg w-1/12 bg-sky-400 p-1 max-sm:text-sm max-sm:w-1/4 md:w-1/4 lg:w-1/4 xl:w-1/4 2xl:w-1/4" onClick={() => click(nilai)}>Hapus</button>
                 </div>
             ))}
             <form method="dialog" className="flex w-full flex-row justify-end">
-                <button className="bg-sky-400  font-semibold w-40 rounded-3xl p-2 mt-2 max-sm:p-1 max-sm:w-1/3">Close</button>
+                <button className="bg-sky-400  font-semibold w-40 rounded-3xl p-2 mt-2 max-sm:p-1 max-sm:w-1/3 md:w-1/3 lg:w-1/3 xl:w-1/3 2xl:w-1/3 md:p-1 lg:p-1 xl:p-1 2xl:p-1">Close</button>
             </form>
         </dialog>
         </>

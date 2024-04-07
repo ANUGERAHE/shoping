@@ -55,7 +55,7 @@ export default function Home({logout}){
             <Troli ref={pesan} pesan={masuk} click={handlehapuspesan}/>
             <div className='flex flex-row w-full h-20 justify-center gap-8 items-center bg-amber-400 max-sm:w-full max-sm:justify-center max-sm:gap-3 max-sm:sticky max-sm:top-0'>
                 <h1 className='font-bold text-3xl max-sm:text-lg max-sm:hidden'>Shopping</h1>
-                <input type="text" placeholder='Search any t-shirt' className='p-2 w-1/2 border-solid border-2 rounded-3xl max-sm:w-2/3 max-sm:p-1 max-sm:text-sm' ref={cari} onKeyDown={handlecari}/>
+                <input type="text" placeholder='Search any t-shirt' className='p-2 w-1/2 border-solid border-2 rounded-3xl max-sm:w-2/3 max-sm:p-1 max-sm:text-sm md:p-1' ref={cari} onKeyDown={handlecari}/>
                 <button className="bg-sky-400  font-semibold w-20 rounded-3xl p-1 flex justify-center items-center max-sm:p-1 max-sm:h-8" onClick={handlekeranjang}><img src={Keranjang} alt="keranjang" className='bold w-4/12 max-sm:w-2/5' /></button>
                 <button className="bg-sky-400  font-semibold w-20 rounded-3xl p-2 max-sm:w-1/4 max-sm:p-1 max-sm:text-sm" onClick={logout}>Log out</button>
                 
